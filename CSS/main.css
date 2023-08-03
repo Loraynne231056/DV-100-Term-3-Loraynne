@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display+SC&display=swap');
+
+/*----------------------------------------------------- */
+/* Global Styles */
+
+/* Fonts */
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Playfair Display SC', serif;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+/* Spacing */
+.full-heigth{
+    height: 100vh;
+}
+.heigth{
+    height: 58vh;
+    background-position: left;
+}
+/* ---------------------------------------------------- */
+/* Navbar */
+.nav-link{
+    font-family: 'Lato', sans-serif;
+    color: #2b2b2b;
+}
+.nav-link:hover{
+    color: #0468BF;
+}
+.nav-link.active{
+    border-bottom: 3px solid #2b2b2b;
+}
+.nav-link.active:hover{
+    border-bottom: 3px solid #0468BF ;
+}
+.navbar{
+    background-color: #EBF4FC;
+    height: 90px;
+}
+
+/* ---------------------------------------------------- */
+/* Carousel */
+
+.carousel-control-prev, .carousel-control-next {
+    top: auto;
+    bottom: 50px;
+    width: 70px;
+    height: 70px;
+    background-color: #EBF4FC;
+    border-radius: 50%
+}
