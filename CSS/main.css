@@ -14,13 +14,8 @@ p {
 }
 
 /* Spacing */
-.full-heigth{
-    height: 100vh;
-}
-.heigth{
-    height: 58vh;
-    background-position: left;
-}
+
+
 /* ---------------------------------------------------- */
 /* Navbar */
 .nav-link{
@@ -37,8 +32,9 @@ p {
     border-bottom: 3px solid #0468BF ;
 }
 .navbar{
-    background-color: #EBF4FC;
+    background-color: #95D1DE;
     height: 90px;
+    width: 100%;
 }
 
 /* ---------------------------------------------------- */
@@ -52,3 +48,80 @@ p {
     background-color: #EBF4FC;
     border-radius: 50%
 }
+
+.headerImage{
+    object-position: top;
+    object-fit: cover;
+    max-height: 400px;
+    width: 100%;
+}
+.extraSpecs{
+    object-position: bottom;
+}
+.extraInfo{
+    object-position: center;
+    padding-top: 80px;
+}
+/* ---------------------------------------------------- */
+/* Gallery */
+
+.gallery{
+    margin:0 auto;
+    margin-top: 140px;
+    margin-bottom: 100px;
+    height: 390px;
+    width: 98%
+}
+.imageOne{
+    border: 1px solid darkgrey;
+    object-fit: cover;
+    width: 100%;
+    height: 390px;
+}
+.smallImageLeft {
+    border: 1px solid darkgrey;
+    object-fit: cover;
+    width: 100%;
+    height: 155px;
+    margin-bottom: 25px;
+}
+.smallImageRight{
+    border: 1px solid darkgrey;
+    object-fit: cover;
+    width: 100%;
+    height: 155px;
+    margin-bottom: 25px;
+}
+.imageFull{
+    border: 1px solid darkgrey;
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 210px;
+}
+.imageLast{
+    border: 1px solid darkgrey;
+    object-fit: cover;
+    width: 100%;
+    height: 390px;
+}
+
+/* ---------------------------------------------------- */
+/* FAQ */
+
+.snowImage{
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 420px;
+    height: 420px;
+}
+
+/* ---------------------------------------------------- */
+/* Footer */
+
+footer{
+    width: 100%;
+    height: 140px;
+    background-color: #95D1DE;
+}
+
