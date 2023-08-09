@@ -130,7 +130,7 @@ footer{
 
 .card{
     height: 200px;
-    background-color:C2DCF4 ;
+    background-color:#C2DCF4 ;
 }
 .cardOne{
     margin-top: 250px;
@@ -141,6 +141,7 @@ footer{
     width: 100%;
     height: 200px;
 }
+
 .card-text{
-margin-bottom: 5px;
+margin-bottom: 8px;
 }

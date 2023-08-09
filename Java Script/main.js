@@ -55,9 +55,23 @@ $(document).ready(function(){
         const trip = arrTrips[i];
         
         console.log(trip);
-        
+
         // Select the trip container and add the trips array to it
         $("#tripContainer").append($("#tripTemplate").html());
+
+        // variable for current trip
+        let currentTrip = $("#tripContainer").children().eq(i+1);
+
+        // Content for current trip array
+        currentTrip.find("#title").text(trip.name);
+        currentTrip.find("#location").text(trip.locations);
+        currentTrip.find("#duration").text(trip.duration);
+        currentTrip.find("#price").text(trip.price);
+        currentTrip.find("#description").text(trip.description);
+        currentTrip.find("#imageTag").attr('src', "Assets/" + trip.image);
+
+        // Hide discription text from current trip 
+        currentTrip.find("#description").hide();
     }
  };
 
@@ -66,12 +80,13 @@ $(document).ready(function(){
 // When Car is Clicked
 // ---------------------------------------------------------- 
 
-$(".card").click(function(){
+$("#tripContainer").on('click', '.card', function(){
 
-    $("#price").toggle();
-    $("#locations").toggle();
-    $("#duration").toggle();
-    $("#description").toggle();
+    $(this).find("#price").toggle();
+    $(this).find("#locations").toggle();
+    $(this).find("#duration").toggle();
+    $(this).find("#location").toggle();
+    $(this).find("#description").toggle();
     
 
 
