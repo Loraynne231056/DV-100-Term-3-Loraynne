@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,h6 {
 
 p {
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 /* Spacing */
@@ -26,10 +26,10 @@ p {
     color: #0468BF;
 }
 .nav-link.active{
-    border-bottom: 3px solid #2b2b2b;
+    border-bottom: 2px solid #2b2b2b;
 }
 .nav-link.active:hover{
-    border-bottom: 3px solid #0468BF ;
+    border-bottom: 2px solid #0468BF ;
 }
 .navbar{
     background-color: #95D1DE;
@@ -120,8 +120,27 @@ p {
 /* Footer */
 
 footer{
+    margin-top: 50px;
     width: 100%;
     height: 140px;
     background-color: #95D1DE;
 }
+/* ---------------------------------------------------- */
+/* Card */
 
+.card{
+    height: 200px;
+    background-color:C2DCF4 ;
+}
+.cardOne{
+    margin-top: 250px;
+}
+.image{
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+.card-text{
+margin-bottom: 5px;
+}
