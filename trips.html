@@ -43,45 +43,77 @@
     </nav>
 
     <!-- --------------------------------------------------------------------------------------------------------- -->
+    <!-- Filters -->
+
+    <!-- Filters and Sorts -->
+
+    <div class="container">
+      <div class="row">
+
+        <!-- Filter Radio Buttons -->
+        <div class="btn-group col-auto radioStyle" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="filterRadio" id="allFilter" value="" autocomplete="off" checked>
+          <label class="btn btn-outline-secondary" for="allFilter">All Trips</label>
+        
+          <input type="radio" class="btn-check" name="filterRadio" id="balticFilter" value="baltic"autocomplete="off">
+          <label class="btn btn-outline-secondary" for="balticFilter">Baltic</label>
+        
+          <input type="radio" class="btn-check" name="filterRadio" id="arcticFilter" value="arctic" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="arcticFilter">Arctic</label>
+
+          <!-- Sort Radio Buttons -->
+          <input type="radio" class="btn-check" name="sortRadio" id="shortLongSort" value="time required" autocomplete="off" checked>
+          <label class="btn btn-outline-secondary" for="shortLongSort"><i class="bi bi-clock"></i> Shortest to Longest</label>
+        
+          <input type="radio" class="btn-check" name="sortRadio" id="costSort" value="low to high" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="costSort"><i class="bi bi-database-down"></i> Lowest to Highest Cost</label>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------------------------------------------------------------- -->
     <!-- Cards -->
 
     <!-- Card Container-->
-    <div class="container py-3 gy-1" style="margin-top: 150px;" id="tripContainer">
+    <div class="container py-3 gy-1" style="margin-top: 20px;" id="tripContainer">
 
-      <!-- Card Template -->
+      <!-- Card List -->
       
-      <template id="tripTemplate">
-        <div class="row">
-          <div class="col-10" style="margin: 0 auto;">
-            <div class="card mb-5">
-              <div class="row g-0">
+      <!-- Cards are appended here -->
 
-                <!-- Image -->
-                <div class="col-md-4">
-                  <img id="imageTag" src="Assets/Penguin.jpg" class="img-fluid rounded-start image" alt="...">
-                </div>
+    </div>
 
-                <!-- Card Text -->
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title" id="title">Arctic Animal Tour</h5>
-                    <p class="card-text" id="location">Destinations: Ranging from the Baltic Sea to Iceland and Greenland.</p>
-                    <p class="card-text" id="duration">Duration: 2 weeks</p>
-                    <p class="card-text" id="price">R21000</p>
-                    <p class="card-text" id="description">This tour goes to four different countries in search of arctic animals. You will get to see whales, harp seals, narwalls (the dollar store's verion of unicorns), and many more majestic animals that survive the coldest climates on earth. If you're thinking that this card doesn't contain my usual snark, it's because I'm tired and can't come up with good jokes. </p>
-                  </div>
-                </div>
+    <!-- Card Template -->
 
+    <template id="tripTemplate">
+      <div class="row">
+        <div class="col-10" style="margin: 0 auto;">
+          <div class="card mb-5">
+            <div class="row g-0">
+
+              <!-- Image -->
+              <div class="col-md-4">
+                <img id="imageTag" src="Assets/Penguin.jpg" class="img-fluid rounded-start image" alt="...">
               </div>
+
+              <!-- Card Text -->
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title" id="title">Arctic Animal Tour</h5>
+                  <p class="card-text" id="location">Destinations: Ranging from the Baltic Sea to Iceland and Greenland.</p>
+                  <p class="card-text" id="duration">Duration: 2 weeks</p>
+                  <p class="card-text" id="price">R21000</p>
+                  <p class="card-text" id="description">This tour goes to four different countries in search of arctic animals. You will get to see whales, harp seals, narwalls (the dollar store's verion of unicorns), and many more majestic animals that survive the coldest climates on earth. If you're thinking that this card doesn't contain my usual snark, it's because I'm tired and can't come up with good jokes. </p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
-      </template>
-
-      
+      </div>
+    </template>
   
-    </div>
-
     <!-- --------------------------------------------------------------------------------------------------------- -->
     <!-- JS -->
 
