@@ -28,7 +28,7 @@ const arrTrips = [
         locations: "Destinations: Ranging from the Baltic Sea to Iceland and Greenland.", 
         duration: 2 + " weeks",
         price: 21000,
-        description: "This tour goes to four different countries in search of arctic animals. You will get to see whales, harp seals, narwalls (the dollar store's verion of unicorns), and many more majestic animals that survive the coldest climates on earth. If you're thinking that this card doesn't contain my usual snark, it's because I'm tired and can't come up with good jokes.",
+        description: "This tour goes to four different countries in search of arctic animals. You will get to see whales, harp seals, narwalls (the dollar store's verion of unicorns), and many more majestic animals that survive the coldest climates on earth. If you're thinking that this card doesn't contain my usual snark, it's because I'm tired and my life is sad (today). If you don't want to be sad, you better pay up that R21000 and join the cruise. Please pay me.",
         image: "Penguin.jpg",
         destinations: "baltic",
         time: "2023-03-09"
@@ -53,6 +53,22 @@ const arrTrips = [
         destinations: "baltic",
         time: "2023-03-28"
     }
+];
+
+const weatherThing = [
+    {
+        weatherImage: "../Assets/Beach.jpg",
+        cityName: "Sopot"
+    },
+    {
+        weatherImage: "../Assets/Tallin.jpg",
+        cityName: "Talin"
+    },
+    {
+        weatherImage: "../Assets/Copenhagen.jpg",
+        cityName: "Copenhagen"
+    }
+    
 ];
 
 let appliedFilter = "";
@@ -187,15 +203,42 @@ $("#tripContainer").on('click', '.card', function(){
 // Weather Thing 
 
 $(document).ready(function(){
-
-$.azax({
-    type:"GET",
-    url:"https://api.openweathermap.org/data/2.5/weather?q=Riga&appid=2e69876c9344bbafe48bcf1b99faf2b1",
-    success:function(data){
-        console.log(data);
-    }
-}).done(function(){
-
-})
-
+    loadWeatherThing()
 });
+
+function loadWeatherThing(){
+
+    // Loop through the shit
+
+    for (let i = 0; i < weatherThing.length; i++) {
+
+        const weather = weatherThing[i];
+        
+        $.ajax({
+            type:"GET",
+            url:"https://api.openweathermap.org/data/2.5/weather?q=" + weather.cityName +"&appid=ee6722071b8e9b2573d5fc48096d8600",
+            success:function(data){
+                cityWeather = data
+            }
+        }).done(function(){
+            $(currentWeather).find("#temperature").text(Math.round(cityWeather.main.temp-273) + " Celsius");
+            $(currentWeather).find("#feelz").text("Feels like: " + Math.round(cityWeather.main.feels_like-273));
+            $(currentWeather).find("#main").text(cityWeather.weather[0].main);
+            
+        })
+
+        
+
+        // Select the trip container and add the trips array to it
+        $(".weatherFucker").append($("#weatherTemp").html());
+
+        // variable for current weather
+        let currentWeather = $(".weatherFucker").children().eq(i+1);
+
+        // Content for current trip array
+        currentWeather.find(".weatherPic").attr('src', weather.weatherImage);
+        currentWeather.find("#city").text(weather.cityName);
+        
+        
+    }
+ };

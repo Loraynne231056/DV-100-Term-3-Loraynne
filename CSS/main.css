@@ -142,11 +142,11 @@ footer{
 /* ---------------------------------------------------- */
 /* Card */
 
-.card{
+.trip-card{
     height: 200px;
     background-color:#C2DCF4 ;
 }
-.card:hover{
+.trip-card:hover{
     background-color: whitesmoke;
 }
 .cardOne{
@@ -163,6 +163,7 @@ footer{
 margin-bottom: 8px;
 }
 
+/* ---------------------------------------------------- */
 /* Filtering */
 
 .radioStyle{
