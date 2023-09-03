@@ -14,9 +14,6 @@ p {
     font-size: 16px;
 }
 
-/* Spacing */
-
-
 /* ---------------------------------------------------- */
 /* Navbar */
 .navbar{
@@ -46,88 +43,52 @@ p {
 .nav{
     margin-left: 50px;
 }
-
-/* ---------------------------------------------------- */
-/* Carousel */
-
-.carousel-control-prev, .carousel-control-next {
-    top: auto;
-    left: 640px;
-    bottom: 50px;
-    width: 70px;
-    height: 70px;
-    background-color: #EBF4FC;
-    border-radius: 50%
-}
-.carousel-control-next{
-    left: 830px;
-}
-
-.headerImage{
-    object-position: top;
-    object-fit: cover;
-    max-height: 400px;
-    width: 100%;
-}
-.carousel-caption{
-    top: 6rem;
-}
-.extraSpecs{
-    object-position: bottom;
-}
-.extraInfo{
-    object-position: center;
-    padding-top: 80px;
+.writing{
+    margin-top: 150px;
 }
 /* ---------------------------------------------------- */
-/* Gallery */
+/* Card */
 
-.gallery{
-    margin:0 auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    height: 390px;
-    width: 98%
+.trip-card{
+    height: 200px;
+    background-color:#C2DCF4 ;
 }
-.imageOne{
-    width: 100%;
-    height: 390px;
-    background-position: center;
-    background-size: cover;
-    object-fit: cover;
+.trip-card:hover{
+    background-color: whitesmoke;
 }
-.smallImageLeft {
-    object-fit: cover;
-    width: 100%;
-    height: 155px;
-    margin-bottom: 25px;
-}
-.smallImageRight{
-    object-fit: cover;
-    width: 100%;
-    height: 155px;
-    margin-bottom: 25px;
-}
-.imageFull{
+.image{
     object-position: center;
     object-fit: cover;
     width: 100%;
-    height: 210px;
-}
-.imageLast{
-    object-fit: cover;
-    width: 100%;
-    height: 390px;
+    height: 200px;
 }
 
+.card-text{
+    margin-bottom: 8px;
+}
+.cardBtn{
+    width: 150px;
+    height: 35px;
+    margin-top: 3px;
+    background-color: #0468BF;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+.cardBtn:hover {
+    background-color: white;
+    color: #0468BF;
+    border: 3px solid #0468BF;
+}
 /* ---------------------------------------------------- */
-/* FAQ */
+/* Filtering */
 
-.snowImage{
-    margin: 0 auto;
-    border-radius: 50%;
-    width: 420px;
-    height: 420px;
+.radioStyle{
+    margin-top: 30px;
+
+}
+.btn-outline-primary{
+    background-color: #dfebf6 ;
 }
 
 /* ---------------------------------------------------- */
@@ -163,21 +124,10 @@ footer{
 }
 
 .footerImage{
-margin-left: 125px;
+    margin-left: 125px;
 }
 
 .listAlign{
     text-align: center;
     padding-left: 190px;
-}
-
-/* ---------------------------------------------------- */
-/* Weather Card */
-
-.weatherCard{
-    margin: 0 auto;
-}
-
-.weatherText{
-    margin-left: 70px;
 }
